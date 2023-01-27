@@ -1,6 +1,6 @@
 import tkinter as tk
 
-canvas = tk.Canvas(master=None, width=420, height=420)
+canvas = tk.Canvas(master=None, width=100, height=360)
 canvas.pack()
 s = 255
 v = 255
@@ -47,6 +47,7 @@ def RGB(h):
 Range = 360
 for i in range(0,Range):
     color = RGB(i)
-    canvas.create_arc(20,20,400,400,start=90-i,extent=-1,fill=color,outline=color)
+    print(color)
+    canvas.create_rectangle(0,i,100,i+1,outline=color,fill=color)
 
 canvas.mainloop()
